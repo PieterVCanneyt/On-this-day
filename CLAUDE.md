@@ -9,7 +9,9 @@ historical articles in the style of Dan Jones — clear, grounded, vivid without
 It creates a formatted Google Doc (with Wikimedia Commons images) and posts the day's
 headlines and teasers to Discord via webhook. Runs daily via GitHub Actions at 06:00 UTC.
 
-Regions covered: Ancient Rome, Ancient Greece, Medieval Europe, United States, Japan.
+Regions covered: Ancient Rome, Ancient Greece, Europe from Classical Era until Fall of Soviet Union, United States.
+
+Amount of articles: 3 most notable events.
 
 ## Tech Stack
 
