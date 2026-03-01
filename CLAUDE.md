@@ -11,7 +11,7 @@ headlines and teasers to Discord via webhook. Runs daily via GitHub Actions at 0
 
 Regions covered: Ancient Rome, Ancient Greece, Europe from Classical Era until Fall of Soviet Union, United States.
 
-Amount of articles: 3 most notable events.
+Amount of articles: 2 most notable events (Claude picks the best across all regions).
 
 ## Tech Stack
 

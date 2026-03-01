@@ -31,12 +31,13 @@ def generate_events(date: datetime) -> list[dict]:
 
     user_prompt = f"""Today is {date_label}. Generate a historical digest for this date.
 
-Find real historical events that happened on {date_label} (any year) in these five regions:
+Search for notable historical events that occurred on {date_label} (any year) across these regions:
 - Ancient Rome
 - Ancient Greece
-- Medieval Europe
+- Europe (Classical Era through the Fall of the Soviet Union)
 - United States
-- Japan
+
+Pick the 2 most interesting and significant events across all regions combined. Quality over quantity — only include events that are genuinely compelling.
 
 Return a JSON object with this exact structure:
 {{
@@ -53,13 +54,12 @@ Return a JSON object with this exact structure:
   ]
 }}
 
-Rules:
-- Only include events that genuinely happened on or within 2 days of {date_label} (any year)
-- If a region has no notable events near this date, include zero events for that region — do NOT fabricate
-- If a region has multiple genuinely interesting events on this date, include all of them
-- Wikipedia URLs must be real, well-known articles — not stubs or obscure pages
-- Keep body text grounded and human: specific dates, names, numbers. No vague drama.
-- wikimedia_search_query should describe a photograph, painting, or illustration — not a map or diagram
+Strict date rules — read carefully:
+- The event must have occurred ON {date_label} exactly. Do not include events that happened the day before, the day after, or "around" this date.
+- For multi-day events (battles, sieges, trials, conferences): only include the event if {date_label} is the day it BEGAN. Do not cover it on subsequent days.
+- If you cannot find 2 events that strictly match {date_label}, return fewer rather than stretching the date. Do NOT fabricate.
+- Wikipedia URLs must be real, well-known articles — not stubs or obscure pages.
+- wikimedia_search_query should describe a photograph, painting, or illustration — not a map or diagram.
 
 Return only the JSON object. No markdown fences, no commentary."""
 

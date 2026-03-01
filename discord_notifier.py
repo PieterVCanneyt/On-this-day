@@ -9,9 +9,8 @@ logger = logging.getLogger(__name__)
 REGION_ORDER = [
     "Ancient Rome",
     "Ancient Greece",
-    "Medieval Europe",
+    "Europe",
     "United States",
-    "Japan",
 ]
 
 # Discord message character limit
